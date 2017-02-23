@@ -26,3 +26,6 @@ while True:
     if continuing[0].lower() == 'q':
         print "thanks, Byeee!"
         break
+    else:
+        user_input = raw_input("Enter prefix math: ")
+        print user_input
