@@ -22,19 +22,28 @@ def subtract(list):
     return counter
 
 
-def multiply(num1, num2):
-    return num1 * num2
+def multiply(list):
+    counter = 1
+    for item in list:
+        counter *= item
+    return counter
 
 
-def divide(num1, num2):
+def divide(list):
     # Need to turn at least argument to float for division to
     # not be integer division
-    return float(num1) / float(num2)
+    counter = float(list[0])
+    for item in list[1:]:
+        counter /= float(item)
+    return counter
 
 
-def square(num1, junk):
+def square(list):
     # Needs only one argument
-    return num1 * num1
+    counter = []
+    for item in list:
+        counter.append(item**2)
+    return counter
 
 
 def cube(num1, junk):
