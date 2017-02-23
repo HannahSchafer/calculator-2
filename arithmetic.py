@@ -46,9 +46,12 @@ def square(list):
     return counter
 
 
-def cube(num1, junk):
+def cube(list):
     # Needs only one argument
-    return num1 * num1 * num1
+    counter = []
+    for item in list:
+        counter.append(item**3)
+    return counter
 
 
 def power(num1, num2):
