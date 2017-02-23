@@ -27,16 +27,13 @@ while True:
     #split input into individual string components
     components = user_input.split(" ")
     #turn stringed numbers into integers and append them into their own list
-    nums_list = []
-    for item in components[1:]:
-        item = int(item)
-        nums_list.append(item)
-    #enabling add function
-    if components[0] == "+":
-        print add(nums_list[0], nums_list[1])
-    #enable subtract
-    if components[0] == "-":
-        print subtract(nums_list[0], nums_list[1])
+    nums_list = [int(item) for item in components[1:]]
+    nums_list.append(None)
+    #create dictionary of symbols and functions
+    symbol_fun = {'+': add, '-': subtract, '*': multiply, '/': divide, 'square': square, 'cube': cube, 'pow': power, '%': mod}
+
+    print symbol_fun[components[0]](nums_list[0], nums_list[1])
+
     # continue or quit?
     continuing = raw_input("continue? ")
     if continuing[0].lower() == 'q':
