@@ -14,7 +14,7 @@ from arithmetic import *
 -ask for input and save it to a variable
     user_input = raw_input
 -tokenize string
-   components = user_input.split(" ") ====> this will give us an list
+   components = user_input.split(" ") ====> this will give us a list
    make components[1:] into integers
 -determine which opperation is being asked for
     compare components[0] to possible opperators
@@ -22,10 +22,17 @@ from arithmetic import *
 """
 
 while True:
+    user_input = raw_input("Enter prefix math: ")
+    print user_input
+    components = user_input.split(" ")
+    nums_list = []
+    for item in components[1:]:
+        item = int(item)
+        nums_list.append(item)
+
+    print nums_list
+    # continue or quit?
     continuing = raw_input("continue? ")
     if continuing[0].lower() == 'q':
         print "thanks, Byeee!"
         break
-    else:
-        user_input = raw_input("Enter prefix math: ")
-        print user_input
