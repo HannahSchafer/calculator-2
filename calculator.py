@@ -22,15 +22,21 @@ from arithmetic import *
 """
 
 while True:
+    #ask user for input
     user_input = raw_input("Enter prefix math: ")
-    print user_input
+    #split input into individual string components
     components = user_input.split(" ")
+    #turn stringed numbers into integers and append them into their own list
     nums_list = []
     for item in components[1:]:
         item = int(item)
         nums_list.append(item)
-
-    print nums_list
+    #enabling add function
+    if components[0] == "+":
+        print add(nums_list[0], nums_list[1])
+    #enable subtract
+    if components[0] == "-":
+        print subtract(nums_list[0], nums_list[1])
     # continue or quit?
     continuing = raw_input("continue? ")
     if continuing[0].lower() == 'q':
