@@ -21,6 +21,8 @@ from arithmetic import *
         call appropriate function
 """
 
+
+
 while True:
     #ask user for input
     user_input = raw_input("Enter prefix math: ")
@@ -28,11 +30,10 @@ while True:
     components = user_input.split(" ")
     #turn stringed numbers into integers and append them into their own list
     nums_list = [int(item) for item in components[1:]]
-    nums_list.append(None)
     #create dictionary of symbols and functions
     symbol_fun = {'+': add, '-': subtract, '*': multiply, '/': divide, 'square': square, 'cube': cube, 'pow': power, '%': mod}
 
-    print symbol_fun[components[0]](nums_list[0], nums_list[1])
+    print symbol_fun[components[0]](nums_list)
 
     # continue or quit?
     continuing = raw_input("continue? ")

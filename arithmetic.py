@@ -1,9 +1,25 @@
-def add(num1, num2):
-    return num1 + num2
+"""TODO
+-alter calc function
+    make list of nums (done)
+    feed list into function
+-change params on functions
+-change the body the arithmetic functions
+    iteration!
+"""
 
 
-def subtract(num1, num2):
-    return num1 - num2
+def add(list):
+    counter = 0
+    for item in list:
+        counter += item
+    return counter
+
+
+def subtract(list):
+    counter = list[0]
+    for item in list[1:]:
+        counter -= item
+    return counter
 
 
 def multiply(num1, num2):
